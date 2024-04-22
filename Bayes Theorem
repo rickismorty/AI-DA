@@ -1,0 +1,14 @@
+public class BayesTheorem {
+        public static double calculatePosteriorProbability(double priorProbability, double likelihood, double evidence) {
+        double numerator = likelihood * priorProbability;
+        double denominator = evidence;
+        return numerator / denominator;
+    }
+public static void main(String[] args) {
+      double priorProbability = 0.01;
+        double likelihood = 0.95;
+        double evidence = 0.02;
+        double posteriorProbability = calculatePosteriorProbability(priorProbability, likelihood, evidence);
+        System.out.println("Posterior Probability of Disease given Positive Test Result: " + posteriorProbability);
+    }
+}
